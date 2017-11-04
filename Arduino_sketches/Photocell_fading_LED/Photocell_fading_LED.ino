@@ -7,8 +7,9 @@ For more information see http://learn.adafruit.com/photocells */
  
 int photocellPin = 0;     // the cell and 10K pulldown are connected to a0
 int photocellReading;     // the analog reading from the sensor divider
-int LEDpin = 11;          // connect Red LED to pin 11 (PWM pin)
-int LEDbrightness;        // 
+int LEDpin = 12;          // connect Red LED to pin 11 (PWM pin)
+int LEDbrightness = 0;        // 
+#define max_V 168
 void setup(void) {
   // We'll send debugging information via the Serial monitor
   Serial.begin(9600);   
@@ -24,8 +25,11 @@ void loop(void) {
   // that means we have to -invert- the reading from 0-1023 back to 1023-0
   photocellReading = 1023 - photocellReading;
   //now we have to map 0-1023 to 0-255 since thats the range analogWrite uses
-  LEDbrightness = map(photocellReading, 0, 1023, 0, 255);
+  LEDbrightness = map(photocellReading, 0, 1023, 0, max_V);
+   Serial.print("LEDreading = ");
+  Serial.println(LEDbrightness);     // the raw analog reading
+ 
   analogWrite(LEDpin, LEDbrightness);
  
-  delay(100);
+  delay(1000);
 }
