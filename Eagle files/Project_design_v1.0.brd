@@ -255,44 +255,6 @@ PHOTOCELL
 </package3d>
 </packages3d>
 </library>
-<library name="linear" urn="urn:adsk.eagle:library:262">
-<description>&lt;b&gt;Linear Devices&lt;/b&gt;&lt;p&gt;
-Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SOT23" urn="urn:adsk.eagle:footprint:16354/1" library_version="2">
-<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
-reflow soldering</description>
-<wire x1="-1.973" y1="1.983" x2="1.973" y2="1.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="-1.983" x2="-1.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="-1.973" y1="-1.983" x2="-1.973" y2="1.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="1.983" x2="1.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.66" width="0.1524" layer="51"/>
-<wire x1="1.422" y1="-0.66" x2="-1.422" y2="-0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="-0.66" x2="-1.422" y2="0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="-0.152" x2="-1.422" y2="0.66" width="0.1524" layer="21"/>
-<wire x1="-1.422" y1="0.66" x2="-0.864" y2="0.66" width="0.1524" layer="21"/>
-<wire x1="0.864" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="21"/>
-<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.152" width="0.1524" layer="21"/>
-<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
-<rectangle x1="-0.5001" y1="-0.3" x2="0.5001" y2="0.3" layer="35"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="SOT23" urn="urn:adsk.eagle:package:16489/2" type="model" library_version="2">
-<description>SMALL OUTLINE TRANSISTOR
-reflow soldering</description>
-</package3d>
-</packages3d>
-</library>
 <library name="potentiometer">
 <packages>
 <package name="SOIL_MOISTURE">
@@ -324,6 +286,26 @@ reflow soldering</description>
 <rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
 <text x="-3.81" y="1.397" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 <text x="-3.81" y="-2.032" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+</package>
+</packages>
+</library>
+<library name="MCP9700T-E_TT">
+<packages>
+<package name="SOT95P237X112-3N">
+<wire x1="-0.275" y1="1.45" x2="0.275" y2="1.45" width="0.2" layer="21"/>
+<wire x1="0.275" y1="1.45" x2="0.275" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="0.275" y1="-1.45" x2="-0.275" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="-0.275" y1="-1.45" x2="-0.275" y2="1.45" width="0.2" layer="21"/>
+<wire x1="-1.95" y1="1.9" x2="1.95" y2="1.9" width="0.05" layer="39"/>
+<wire x1="1.95" y1="1.9" x2="1.95" y2="-1.8" width="0.05" layer="39"/>
+<wire x1="1.95" y1="-1.8" x2="-1.95" y2="-1.8" width="0.05" layer="39"/>
+<wire x1="-1.95" y1="-1.8" x2="-1.95" y2="1.9" width="0.05" layer="39"/>
+<circle x="-1.2" y="1.7" radius="0.1" width="0.2" layer="21"/>
+<text x="-2.000740625" y="2.000740625" size="0.813103125" layer="25">&gt;NAME</text>
+<text x="-2.002959375" y="-2.704" size="0.814003125" layer="27">&gt;VALUE</text>
+<smd name="1" x="-1.15" y="0.95" dx="1.1" dy="0.65" layer="1"/>
+<smd name="2" x="-1.15" y="-0.95" dx="1.1" dy="0.65" layer="1"/>
+<smd name="3" x="1.15" y="0" dx="1.1" dy="0.65" layer="1" rot="R180"/>
 </package>
 </packages>
 </library>
@@ -515,61 +497,68 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="LD1" library="Semicond" package="PLCC-4" value="ASMB-MTB0-0A3A2PLCC-4" x="19.05" y="12.7">
-<attribute name="CODE" value="2401105" x="19.05" y="12.7" size="1.778" layer="27" display="off"/>
-<attribute name="DISTRIBUTOR" value="Farnell" x="19.05" y="12.7" size="1.778" layer="27" display="off"/>
-<attribute name="LINK" value="http://ch.farnell.com/fr-CH/broadcom-limited/asmb-mtb0-0a3a2/led-rgb-plcc4-surface-noire/dp/2401105" x="19.05" y="12.7" size="1.778" layer="27" display="off"/>
-<attribute name="PARTNO" value="ASMB-MTB0-0A3A2" x="19.05" y="12.7" size="1.778" layer="27" display="off"/>
-<attribute name="REFERENCE" value="ASMB-MTB0-0A3A2" x="19.05" y="12.7" size="1.778" layer="27" display="off"/>
-<attribute name="UNIT_PRICE" value="0.332" x="19.05" y="12.7" size="1.778" layer="27" display="off"/>
+<element name="LD1" library="Semicond" package="PLCC-4" value="ASMB-MTB0-0A3A2PLCC-4" x="13.97" y="38.1" rot="R270">
+<attribute name="CODE" value="2401105" x="13.97" y="38.1" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DISTRIBUTOR" value="Farnell" x="13.97" y="38.1" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="LINK" value="http://ch.farnell.com/fr-CH/broadcom-limited/asmb-mtb0-0a3a2/led-rgb-plcc4-surface-noire/dp/2401105" x="13.97" y="38.1" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PARTNO" value="ASMB-MTB0-0A3A2" x="13.97" y="38.1" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="REFERENCE" value="ASMB-MTB0-0A3A2" x="13.97" y="38.1" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="UNIT_PRICE" value="0.332" x="13.97" y="38.1" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="R01" library="custom_part" package="0603" value="3K" x="12.7" y="21.59">
-<attribute name="PARTNO" value="ERJ-PA3F1002V" x="12.7" y="21.59" size="1.778" layer="27" display="off"/>
+<element name="R01" library="custom_part" package="0603" value="3K" x="19.05" y="35.56">
+<attribute name="PARTNO" value="ERJ-PA3F1002V" x="19.05" y="35.56" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R02" library="custom_part" package="0603" value="2K" x="24.13" y="20.32">
-<attribute name="PARTNO" value="ERJ-PA3F1002V" x="24.13" y="20.32" size="1.778" layer="27" display="off"/>
+<element name="R02" library="custom_part" package="0603" value="2K" x="7.62" y="36.83" rot="R180">
+<attribute name="PARTNO" value="ERJ-PA3F1002V" x="7.62" y="36.83" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="R03" library="custom_part" package="0603" value="2K" x="12.7" y="8.89">
-<attribute name="PARTNO" value="ERJ-PA3F1002V" x="12.7" y="8.89" size="1.778" layer="27" display="off"/>
+<element name="R03" library="custom_part" package="0603" value="2K" x="20.32" y="39.37">
+<attribute name="PARTNO" value="ERJ-PA3F1002V" x="20.32" y="39.37" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R04" library="SparkFun-Sensors" library_urn="urn:adsk.eagle:library:534" package="PHOTOCELL" package3d_urn="urn:adsk.eagle:package:39940/1" value="PHOTOCELLPTH" x="11.43" y="-8.89">
-<attribute name="PROD_ID" value="COMP-09129" x="11.43" y="-8.89" size="1.778" layer="27" display="off"/>
-<attribute name="SF_ID" value="SEN-09088" x="11.43" y="-8.89" size="1.778" layer="27" display="off"/>
+<element name="R04" library="SparkFun-Sensors" library_urn="urn:adsk.eagle:library:534" package="PHOTOCELL" package3d_urn="urn:adsk.eagle:package:39940/1" value="PHOTOCELLPTH" x="21.59" y="25.4">
+<attribute name="PROD_ID" value="COMP-09129" x="21.59" y="25.4" size="1.778" layer="27" display="off"/>
+<attribute name="SF_ID" value="SEN-09088" x="21.59" y="25.4" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R05" library="custom_part" package="0603" value="10K" x="3.81" y="-19.05">
-<attribute name="PARTNO" value="ERJ-PA3F1002V" x="3.81" y="-19.05" size="1.778" layer="27" display="off"/>
+<element name="R05" library="custom_part" package="0603" value="10K" x="15.24" y="25.4">
+<attribute name="PARTNO" value="ERJ-PA3F1002V" x="15.24" y="25.4" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" package="SOT23" package3d_urn="urn:adsk.eagle:package:16489/2" value="LM50" x="2.54" y="-25.4"/>
-<element name="U$1" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="12.7" y="-39.37"/>
-<element name="U$2" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="12.7" y="-58.42"/>
-<element name="U$3" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="12.7" y="-77.47"/>
-<element name="U$4" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="12.7" y="-96.52"/>
+<element name="U$1" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="38.1" y="33.02"/>
+<element name="U$2" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="38.1" y="27.94"/>
+<element name="U$3" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="38.1" y="22.86"/>
+<element name="U$4" library="potentiometer" package="SOIL_MOISTURE" value="SOIL_MOISTURE" x="38.1" y="17.78"/>
+<element name="U1" library="MCP9700T-E_TT" package="SOT95P237X112-3N" value="MCP9700T-E/TT" x="21.59" y="15.24">
+<attribute name="AVAILABILITY" value="Good" x="21.59" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" MCP9700 Series 5 V -40 to +125°C Low-Power Linear Active Thermistor " x="21.59" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="Microchip" x="21.59" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="MCP9700T-E/TT" x="21.59" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="SOT-23-3 Microchip" x="21.59" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="0.21 USD" x="21.59" y="15.24" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
-<signal name="3.3V">
+<signal name="3.3V" airwireshidden="yes">
 <contactref element="LD1" pad="1"/>
 <contactref element="R04" pad="2"/>
-<contactref element="IC1" pad="1"/>
 <contactref element="U$1" pad="1"/>
 <contactref element="U$2" pad="1"/>
 <contactref element="U$3" pad="1"/>
 <contactref element="U$4" pad="1"/>
-<wire x1="10.16" y1="-77.47" x2="10.16" y2="-96.52" width="0" layer="19" extent="1-1"/>
-<wire x1="10.16" y1="-58.42" x2="10.16" y2="-77.47" width="0" layer="19" extent="1-1"/>
-<wire x1="10.16" y1="-39.37" x2="10.16" y2="-58.42" width="0" layer="19" extent="1-1"/>
-<wire x1="1.59" y1="-26.5" x2="10.16" y2="-39.37" width="0" layer="19" extent="1-1"/>
-<wire x1="13.43" y1="-8.89" x2="1.59" y2="-26.5" width="0" layer="19" extent="1-1"/>
-<wire x1="18.3" y1="11.2" x2="13.43" y2="-8.89" width="0" layer="19" extent="1-1"/>
+<contactref element="U1" pad="1"/>
+<wire x1="35.56" y1="27.94" x2="35.56" y2="17.78" width="0" layer="19" extent="1-1"/>
+<wire x1="23.59" y1="25.4" x2="35.56" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="35.56" y1="22.86" x2="35.56" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="35.56" y1="33.02" x2="35.56" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="12.47" y1="38.85" x2="35.56" y2="33.02" width="0" layer="19" extent="1-1"/>
+<wire x1="20.44" y1="16.19" x2="12.47" y2="38.85" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$34">
 <contactref element="LD1" pad="3"/>
 <contactref element="R01" pad="1"/>
-<wire x1="11.85" y1="21.59" x2="19.8" y2="14.2" width="0" layer="19" extent="1-1"/>
+<wire x1="18.2" y1="35.56" x2="15.47" y2="37.35" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$35">
 <contactref element="LD1" pad="4"/>
 <contactref element="R02" pad="1"/>
-<wire x1="23.28" y1="20.32" x2="19.8" y2="11.2" width="0" layer="19" extent="1-1"/>
+<wire x1="8.47" y1="36.83" x2="12.47" y2="37.35" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="LED_G">
 <contactref element="R01" pad="2"/>
@@ -580,7 +569,7 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="LD1" pad="2"/>
 <contactref element="R03" pad="1"/>
-<wire x1="11.85" y1="8.89" x2="18.3" y2="14.2" width="0" layer="19" extent="1-1"/>
+<wire x1="19.47" y1="39.37" x2="15.47" y2="38.85" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="LED_B">
 <contactref element="R03" pad="2"/>
@@ -588,31 +577,23 @@ design rules under a new name.</description>
 <signal name="PHOTOCELL_READ">
 <contactref element="R05" pad="2"/>
 <contactref element="R04" pad="1"/>
-<wire x1="9.43" y1="-8.89" x2="4.66" y2="-19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="19.59" y1="25.4" x2="16.09" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="GND">
+<signal name="GND" airwireshidden="yes">
 <contactref element="R05" pad="1"/>
-</signal>
-<signal name="TEMP_READ">
-<contactref element="IC1" pad="2"/>
-</signal>
-<signal name="N$4">
-<contactref element="IC1" pad="3"/>
-</signal>
-<signal name="N$2">
+<contactref element="U$2" pad="2"/>
+<contactref element="U$3" pad="2"/>
 <contactref element="U$1" pad="2"/>
+<contactref element="U$4" pad="2"/>
+<contactref element="U1" pad="3"/>
+<wire x1="38.1" y1="17.78" x2="14.39" y2="25.4" width="0" layer="19" extent="1-1"/>
+<wire x1="38.1" y1="27.94" x2="38.1" y2="17.78" width="0" layer="19" extent="1-1"/>
+<wire x1="38.1" y1="22.86" x2="38.1" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="38.1" y1="33.02" x2="38.1" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="22.74" y1="15.24" x2="38.1" y2="33.02" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOISTURE1">
 <contactref element="U$1" pad="3"/>
-</signal>
-<signal name="N$3">
-<contactref element="U$2" pad="2"/>
-</signal>
-<signal name="N$5">
-<contactref element="U$3" pad="2"/>
-</signal>
-<signal name="N$6">
-<contactref element="U$4" pad="2"/>
 </signal>
 <signal name="MOISTURE3">
 <contactref element="U$3" pad="3"/>
@@ -622,6 +603,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="MOISTURE2">
 <contactref element="U$2" pad="3"/>
+</signal>
+<signal name="TEMP_READ">
+<contactref element="U1" pad="2"/>
 </signal>
 </signals>
 </board>

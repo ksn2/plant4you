@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -547,84 +547,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
-<library name="linear" urn="urn:adsk.eagle:library:262">
-<description>&lt;b&gt;Linear Devices&lt;/b&gt;&lt;p&gt;
-Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SOT23" urn="urn:adsk.eagle:footprint:16354/1" library_version="2">
-<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
-reflow soldering</description>
-<wire x1="-1.973" y1="1.983" x2="1.973" y2="1.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="-1.983" x2="-1.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="-1.973" y1="-1.983" x2="-1.973" y2="1.983" width="0.0508" layer="39"/>
-<wire x1="1.973" y1="1.983" x2="1.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.66" width="0.1524" layer="51"/>
-<wire x1="1.422" y1="-0.66" x2="-1.422" y2="-0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="-0.66" x2="-1.422" y2="0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="-0.152" x2="-1.422" y2="0.66" width="0.1524" layer="21"/>
-<wire x1="-1.422" y1="0.66" x2="-0.864" y2="0.66" width="0.1524" layer="21"/>
-<wire x1="0.864" y1="0.66" x2="1.422" y2="0.66" width="0.1524" layer="21"/>
-<wire x1="1.422" y1="0.66" x2="1.422" y2="-0.152" width="0.1524" layer="21"/>
-<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
-<rectangle x1="-0.5001" y1="-0.3" x2="0.5001" y2="0.3" layer="35"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="SOT23" urn="urn:adsk.eagle:package:16489/2" type="model" library_version="2">
-<description>SMALL OUTLINE TRANSISTOR
-reflow soldering</description>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="LM50" urn="urn:adsk.eagle:symbol:16353/1" library_version="2">
-<wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
-<text x="-2.286" y="-4.064" size="1.524" layer="95">GND</text>
-<text x="-7.62" y="3.81" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+VS" x="-10.16" y="0" length="short" direction="in"/>
-<pin name="VO" x="10.16" y="0" length="short" direction="in" rot="R180"/>
-<pin name="GND" x="0" y="-7.62" visible="pad" length="short" direction="pwr" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="LM50" urn="urn:adsk.eagle:component:16823/2" prefix="IC" library_version="2">
-<description>&lt;b&gt;SOT-23 Single-Supply Centigrade Temperature Sensor&lt;/b&gt;&lt;p&gt;
-Vout = (10mV/°C x Temp °C) +5mmmV&lt;br&gt;
-
-Source: http://cache.national.com/ds/LM/LM50.pdf</description>
-<gates>
-<gate name="G$1" symbol="LM50" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT23">
-<connects>
-<connect gate="G$1" pin="+VS" pad="1"/>
-<connect gate="G$1" pin="GND" pad="3"/>
-<connect gate="G$1" pin="VO" pad="2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16489/2"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="potentiometer">
 <packages>
 <package name="SOIL_MOISTURE">
@@ -707,6 +629,66 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MCP9700T-E_TT">
+<packages>
+<package name="SOT95P237X112-3N">
+<wire x1="-0.275" y1="1.45" x2="0.275" y2="1.45" width="0.2" layer="21"/>
+<wire x1="0.275" y1="1.45" x2="0.275" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="0.275" y1="-1.45" x2="-0.275" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="-0.275" y1="-1.45" x2="-0.275" y2="1.45" width="0.2" layer="21"/>
+<wire x1="-1.95" y1="1.9" x2="1.95" y2="1.9" width="0.05" layer="39"/>
+<wire x1="1.95" y1="1.9" x2="1.95" y2="-1.8" width="0.05" layer="39"/>
+<wire x1="1.95" y1="-1.8" x2="-1.95" y2="-1.8" width="0.05" layer="39"/>
+<wire x1="-1.95" y1="-1.8" x2="-1.95" y2="1.9" width="0.05" layer="39"/>
+<circle x="-1.2" y="1.7" radius="0.1" width="0.2" layer="21"/>
+<text x="-2.000740625" y="2.000740625" size="0.813103125" layer="25">&gt;NAME</text>
+<text x="-2.002959375" y="-2.704" size="0.814003125" layer="27">&gt;VALUE</text>
+<smd name="1" x="-1.15" y="0.95" dx="1.1" dy="0.65" layer="1"/>
+<smd name="2" x="-1.15" y="-0.95" dx="1.1" dy="0.65" layer="1"/>
+<smd name="3" x="1.15" y="0" dx="1.1" dy="0.65" layer="1" rot="R180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MCP9700T-E/TT">
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<text x="-10.1791" y="5.08953125" size="2.544759375" layer="95">&gt;NAME</text>
+<text x="-10.1788" y="-7.63411875" size="2.544709375" layer="96">&gt;VALUE</text>
+<pin name="VOUT" x="-15.24" y="0" length="middle" direction="out"/>
+<pin name="VDD" x="15.24" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="GND" x="15.24" y="-2.54" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MCP9700T-E/TT" prefix="U">
+<description>Low-Power Linear Active Thermistor™ IC</description>
+<gates>
+<gate name="G$1" symbol="MCP9700T-E/TT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT95P237X112-3N">
+<connects>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="VDD" pad="1"/>
+<connect gate="G$1" pin="VOUT" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Good"/>
+<attribute name="DESCRIPTION" value=" MCP9700 Series 5 V -40 to +125°C Low-Power Linear Active Thermistor "/>
+<attribute name="MF" value="Microchip"/>
+<attribute name="MP" value="MCP9700T-E/TT"/>
+<attribute name="PACKAGE" value="SOT-23-3 Microchip"/>
+<attribute name="PRICE" value="0.21 USD"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -739,7 +721,6 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 <attribute name="PARTNO" value="ERJ-PA3F1002V"/>
 </part>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="LM50" device="" package3d_urn="urn:adsk.eagle:package:16489/2"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="U$1" library="potentiometer" deviceset="SOIL_MOISTURE" device=""/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -749,6 +730,7 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="U$4" library="potentiometer" deviceset="SOIL_MOISTURE" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="U1" library="MCP9700T-E_TT" deviceset="MCP9700T-E/TT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -799,8 +781,7 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 <attribute name="PARTNO" x="45.72" y="134.62" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="SUPPLY1" gate="GND" x="30.48" y="132.08"/>
-<instance part="IC1" gate="G$1" x="-33.02" y="139.7"/>
-<instance part="SUPPLY2" gate="GND" x="-33.02" y="121.92"/>
+<instance part="SUPPLY2" gate="GND" x="-10.16" y="129.54"/>
 <instance part="U$1" gate="G$1" x="-50.8" y="73.66"/>
 <instance part="SUPPLY3" gate="GND" x="-50.8" y="55.88"/>
 <instance part="U$2" gate="G$1" x="-17.78" y="73.66"/>
@@ -809,6 +790,7 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 <instance part="SUPPLY5" gate="GND" x="-50.8" y="12.7"/>
 <instance part="U$4" gate="G$1" x="-17.78" y="30.48"/>
 <instance part="SUPPLY6" gate="GND" x="-17.78" y="12.7"/>
+<instance part="U1" gate="G$1" x="-35.56" y="137.16"/>
 </instances>
 <busses>
 </busses>
@@ -823,11 +805,6 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 <pinref part="R04" gate="G$1" pin="P$2"/>
 <wire x1="71.12" y1="134.62" x2="86.36" y2="134.62" width="0.1524" layer="91"/>
 <label x="83.82" y="134.62" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="G$1" pin="+VS"/>
-<wire x1="-43.18" y1="139.7" x2="-66.04" y2="139.7" width="0.1524" layer="91"/>
-<label x="-66.04" y="139.7" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
@@ -848,6 +825,11 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 <pinref part="U$4" gate="G$1" pin="VCC"/>
 <wire x1="-17.78" y1="38.1" x2="-17.78" y2="45.72" width="0.1524" layer="91"/>
 <label x="-17.78" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="VDD"/>
+<wire x1="-20.32" y1="139.7" x2="-5.08" y2="139.7" width="0.1524" layer="91"/>
+<label x="-5.08" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$34" class="0">
@@ -932,18 +914,18 @@ Source: http://cache.national.com/ds/LM/LM50.pdf</description>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 <wire x1="-17.78" y1="22.86" x2="-17.78" y2="15.24" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="-20.32" y1="134.62" x2="-10.16" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
+<wire x1="-10.16" y1="134.62" x2="-10.16" y2="132.08" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="TEMP_READ" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="VO"/>
-<wire x1="-22.86" y1="139.7" x2="-7.62" y2="139.7" width="0.1524" layer="91"/>
-<label x="-10.16" y="139.7" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="GND"/>
-<wire x1="-33.02" y1="132.08" x2="-33.02" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="137.16" x2="-50.8" y2="137.16" width="0.1524" layer="91"/>
+<label x="-58.42" y="137.16" size="1.778" layer="95" rot="MR0"/>
+<pinref part="U1" gate="G$1" pin="VOUT"/>
 </segment>
 </net>
 <net name="MOISTURE1" class="0">
