@@ -11,19 +11,20 @@ int photocell_reading()
 void photocell_out_serial_msg(int photocellReading)
 {
   int range = map(photocellReading, sensorMin, sensorMax, 0, 3);
+     // Serial.println(photocellReading);
   // do something different depending on the range value:
   switch (range) {
     case 0:    // your hand is on the sensor
-      Serial.println("dark");
+      Serial.println("bright");
       break;
     case 1:    // your hand is close to the sensor
-      Serial.println("dim");
-      break;
-    case 2:    // your hand is a few inches from the sensor
       Serial.println("medium");
       break;
+    case 2:    // your hand is a few inches from the sensor
+      Serial.println("dim");
+      break;
     case 3:    // your hand is nowhere near the sensor
-      Serial.println("bright");
+      Serial.println("dark");
       break;
       }
 }

@@ -33,105 +33,125 @@ void RGB_LEDs_color_show()
 //color + DIMMING effect
 void setColor1(int color)
 {
+  int dimm=0;
    switch (color) {
-   case 0:    // your hand is on the sensor
+   case 0:   
       setColor(max_V, 0, 0);  // red
       break;
       
-   case 1:    // your hand is on the sensor
+   case 1:  
       setColor(0, max_V, 0);  // green
       break;
       
-   case 2:    // your hand is on the sensor
+   case 2:    
       setColor(0, 0, max_V);  // blue
       break;
       
-   case 3:    // your hand is on the sensor
+   case 3:   
       setColor(max_V, max_V, 0);  // yellow
       break;
       
-   case 4:    // your hand is on the sensor
+   case 4:  
       setColor(52, 0, 52);  // purple
       break;
       
-   case 5:    // your hand is on the sensor
+   case 5:    
       setColor(0, max_V, max_V);  // aqua
       break; 
        
-   case 100:    // your hand is on the sensor
-      for(int i=0;i++;i<max_V)
+   case 10:  
+      while(dimm<max_V)
       {
-        setColor(i, 0, 0);  // red
+        setColor(dimm, 0, 0);  // red
+        delay(10);
+        dimm++;
       }
-      delay(1);
-      for(int i=max_V;i--;i>0)
+      delay(10);
+      while(dimm>0)
       {
-        setColor(i, 0, 0);  // red
+        dimm--;
+        setColor(dimm, 0, 0);  
+        delay(10);
       }
       break;
       
-   case 101:    // your hand is on the sensor
-      for(int i=0;i++;i<max_V)
-      {
-        setColor(0, i, 0);  // red
-      }
-      delay(1);
-      for(int i=max_V;i--;i>0)
-      {
-        setColor(0, i, 0);  // red
-      }
+   case 11:  
+          while(dimm<max_V)
+        {
+          setColor(0, dimm, 0);  // green
+          delay(10);
+          dimm++;
+        }
+        while(dimm>0)
+        {
+          dimm--;
+          setColor(0, dimm, 0);  
+          delay(10);
+        }
       break;
       
-   case 102:    // your hand is on the sensor
-      
-      for(int i=0;i++;i<max_V)
+   case 12:   
+      while(dimm<max_V)
       {
-        setColor(0, 0, i);  // red
+        setColor(0, 0, dimm);  // blue
+        delay(10);
+        dimm++;
       }
-      delay(1);
-      for(int i=max_V;i--;i>0)
+      delay(10);
+      while(dimm>0)
       {
-        setColor(0, 0, i);  // red
+        dimm--;
+        setColor(0 ,0, dimm);  
+        delay(10);
+      }
+      break;   
+  
+  case 13:   
+      while(dimm<max_V)
+      {
+        setColor(dimm, dimm, 0);  // not red
+        delay(10);
+        dimm++;
+      }
+      delay(10);
+      while(dimm>0)
+      {
+        dimm--;
+        setColor(dimm, dimm, 0);  
+        delay(10);
+      }
+      break;   
+  
+  case 14:    
+      while(dimm<max_V)
+      {
+        setColor(dimm, 0, dimm);  // not red
+        delay(10);
+        dimm++;
+      }
+      delay(10);
+      while(dimm>0)
+      {
+        dimm--;
+        setColor(dimm, 0, dimm);  
+        delay(10);
+      }
+      break;   
+  
+  case 15:   
+      while(dimm<max_V)
+      {
+        setColor(0, dimm, dimm);  // not red
+        delay(10);
+        dimm++;
+      }
+      delay(10);
+      while(dimm>0)
+      {
+        dimm--;
+        setColor(0, dimm, dimm);  
+        delay(10);
       }
       break;
-      
-   case 103:    // your hand is on the sensor
-
-      for(int i=0;i++;i<max_V)
-      {
-        setColor(i, i, 0);  // red
-      }
-      delay(1);
-      for(int i=max_V;i--;i>0)
-      {
-        setColor(i, i, 0);  // red
-      }
-      break;
-      
-   case 104:    // your hand is on the sensor
-     
-      for(int i=0;i++;i<purple_idx)
-      {
-        setColor(i, 0, i);  // red
-      }
-      delay(1);
-      for(int i=purple_idx;i--;i>0)
-      {
-        setColor(i, 0, i);  // red
-      }
-      break;
-      
-   case 105:    // your hand is on the sensor
-      
-      for(int i=0;i++;i<max_V)
-      {
-        setColor(0, i, i);  // red
-      }
-      delay(1);
-      for(int i=max_V;i--;i>0)
-      {
-        setColor(0, i, i);  // red
-      }
-      break;     
-      }
+   }
 }

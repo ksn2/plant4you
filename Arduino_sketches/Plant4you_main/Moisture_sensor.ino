@@ -49,7 +49,8 @@ void moisture_level_check_value(int moisture_level,int motor_nr)
     break;
   }
   
-  int moisture = map(moisture_level, sensorMin, sensorMax, 0, 1);
+  int moisture = map(moisture_level, sensorMin2, sensorMax2, 0, 1);
+  Serial.println(moisture);
   if (moisture==0)
   {
     //set motor for 
@@ -58,7 +59,7 @@ void moisture_level_check_value(int moisture_level,int motor_nr)
     analogWrite(moisture_LED,0); 
   }
   else{
-    //do nothing
     analogWrite(moisture_LED,0);
+    //do nothing
   }
 }
