@@ -50,7 +50,7 @@ void moisture_level_check_value(int moisture_level,int motor_nr)
   }
   
   int moisture = map(moisture_level, sensorMin2, sensorMax2, 0, 1);
-  Serial.println(moisture);
+ // Serial.println(moisture);
   if (moisture==0)
   {
     //set motor for 
