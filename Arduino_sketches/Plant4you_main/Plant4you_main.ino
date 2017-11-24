@@ -25,7 +25,7 @@ int moisture_LED = 13;
 #define sensorMin 200
 #define sensorMax 700
 #define sensorMin2 0
-#define sensorMax2 674
+#define sensorMax2 500
 
 void setup() 
 {
@@ -58,15 +58,14 @@ void loop()
 //  setColor1(YELLOW+DIMMING);
 //  setColor1(PURPLE+DIMMING);
  // setColor1(AQUA+DIMMING);
-   int sensorValue = analogRead(A5);
-  // print out the value you read:
-  Serial.println(sensorValue);
-  delay(100);
 
+
+  int sensorValue = analogRead(A5);
+  //Serial.println(sensorValue);
  
  
   int moisture_level=soil_moisture_read(SENSOR1); 
-  //Serial.println(moisture_level);
+  Serial.println(moisture_level);
   moisture_level_check_value(moisture_level,SENSOR1);
   
 }
