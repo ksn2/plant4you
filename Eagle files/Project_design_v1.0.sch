@@ -8259,8 +8259,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="R08" gate="G$1" x="-243.84" y="226.06" rot="R90">
 <attribute name="PARTNO" x="-243.84" y="226.06" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="R09" gate="G$1" x="-236.22" y="210.82" rot="R90">
-<attribute name="PARTNO" x="-236.22" y="210.82" size="1.778" layer="96" rot="R90" display="off"/>
+<instance part="R09" gate="G$1" x="-236.22" y="208.28" rot="R90">
+<attribute name="PARTNO" x="-236.22" y="208.28" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="R10" gate="G$1" x="-251.46" y="208.28" rot="R90">
 <attribute name="PARTNO" x="-251.46" y="208.28" size="1.778" layer="96" rot="R90" display="off"/>
@@ -8646,7 +8646,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-254" y1="170.18" x2="-254" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-236.22" y1="205.74" x2="-236.22" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="203.2" x2="-236.22" y2="198.12" width="0.1524" layer="91"/>
 <pinref part="U$14" gate="G$1" pin="GND"/>
 <pinref part="R09" gate="G$1" pin="1"/>
 </segment>
@@ -9013,7 +9013,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="N$16" class="0">
 <segment>
-<wire x1="-236.22" y1="220.98" x2="-236.22" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="-236.22" y1="220.98" x2="-236.22" y2="213.36" width="0.1524" layer="91"/>
 <pinref part="R09" gate="G$1" pin="2"/>
 <pinref part="IC3" gate="A" pin="PROG"/>
 <wire x1="-228.6" y1="220.98" x2="-236.22" y2="220.98" width="0.1524" layer="91"/>
@@ -9749,12 +9749,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <approved hash="201,1,-238.76,116.84,3.3V,3.3V\, 5.0V,,,,"/>
 <approved hash="104,1,83.82,175.26,IC5,+VS,3.3V,,,"/>
 <approved hash="104,1,119.38,175.26,IC5,-VS,GND,,,"/>
-<approved hash="104,1,-259.08,185.42,CN1,VBUS,5.0V,,,"/>
-<approved hash="113,1,36.9926,130.217,J1,,,,,"/>
-<approved hash="113,1,75.0926,127.677,J2,,,,,"/>
-<approved hash="113,1,36.9926,89.5773,J3,,,,,"/>
-<approved hash="113,1,77.6326,89.5773,J4,,,,,"/>
-<approved hash="113,1,-258.403,58.2574,J5,,,,,"/>
+<approved hash="104,1,-256.54,185.42,CN1,VBUS,5.0V,,,"/>
+<approved hash="104,1,-228.6,213.36,IC3,VDD_2,5.0V,,,"/>
+<approved hash="104,1,-228.6,210.82,IC3,VDD,5.0V,,,"/>
+<approved hash="206,1,-187.96,210.82,V_BAT,,,,,"/>
+<approved hash="206,1,-187.96,208.28,V_BAT,,,,,"/>
+<approved hash="113,1,80.1726,254.677,J1,,,,,"/>
+<approved hash="113,1,54.7726,267.377,J2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
