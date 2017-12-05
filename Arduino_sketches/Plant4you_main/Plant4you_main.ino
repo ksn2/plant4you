@@ -1,73 +1,50 @@
+#include "Define.h"
+#include "LowPower.h"
+#include "RGBLED.h"
 
-int photocellPin = A0;     // the cell and 10K pulldown are connected to a0
+int battery_voltage;
+int water_level;
 
-int LEDpin = 12;          // connect Red LED to pin 11 (PWM pin)
-int redPin = 11;
-int greenPin = 10;
-int bluePin = 9;
-int moisture_LED = 13;
 
-#define RED 0
-#define GREEN 1
-#define BLUE 2
-#define YELLOW 3
-#define PURPLE 4
-#define AQUA 5
-#define DIMMING 10
-
-#define SENSOR1 0
-#define SENSOR2 1
-#define SENSOR3 2
-#define SENSOR4 3
-
-#define max_V 168
-#define purple_idx 52
-#define sensorMin 200
-#define sensorMax 700
-#define sensorMin2 0
-#define sensorMax2 500
-
+RGBLED Led2(12,13,14,COMMON_CATHODE);
+RGBLED Led1(11,10,9,COMMON_CATHODE);
+  
 void setup() 
-{
+{ 
+  setup_alarm(); //(PIR, buzzer)
+  setup_voltage_monitoring();
+  setup_photocell();
+  setup_level_sensor();
+  setup_watering_system();
+  
+  pinMode(voltage_ctrlPin,OUTPUT);
+  digitalWrite(voltage_ctrlPin, HIGH);
+  
+  //Led1.setColorDimm(255,255,255);
+ 
   Serial.begin(9600);
-  RGB_LEDs_setup();
+  
 }
 
 void loop() 
 {
-  int photocellReading = photocell_reading();
-  photocell_out_LED_brightness(photocellReading);
-  //photocell_out_serial_msg(photocellReading);
-  delay(500);
+  led_update_color();
 
-//  setColor1(RED);
-//  delay(500);
-//  setColor1(BLUE);
-//  delay(500);
-//  setColor1(GREEN);
-//  delay(500);
-//  setColor1(YELLOW);
-//  delay(500);
-//  setColor1(PURPLE);
-//  delay(500);
-//  setColor1(AQUA);
-
-  //setColor1(RED+DIMMING);
-  //setColor1(BLUE+DIMMING);
-  //setColor1(GREEN+DIMMING);
-//  setColor1(YELLOW+DIMMING);
-//  setColor1(PURPLE+DIMMING);
- // setColor1(AQUA+DIMMING);
-
-
-  int sensorValue = analogRead(A5);
-  //Serial.println(sensorValue);
- 
- 
-  int moisture_level=soil_moisture_read(SENSOR1); 
-  Serial.println(moisture_level);
-  moisture_level_check_value(moisture_level,SENSOR1);
+  //define color to display on the RGB_LED2 depending on the water brightness mean value
+  brightness_check();
+  //watertank level check and display the color corresponding of the value read on the RGB_LED2
+  water_level_check();
+  //battery voltage  level check and display the color corresponding of the value read on the RGB_LED1  
+  battery_voltage_check(); 
   
+  //moisture check: if the moisture is too low the water pump will be activated
+  watering_channel(CHANNEL1);
+  watering_channel(CHANNEL2);
+  watering_channel(CHANNEL3);
+  watering_channel(CHANNEL4);
+
+  //activation of PIR detector and buzzer if necessary
+  alarm_activation();
 }
 
 

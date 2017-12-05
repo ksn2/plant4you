@@ -1,37 +1,47 @@
+void led_update_color()
+{
+  Led1.dimmRGB();
+  //Led2.dimmRGB();
+  int progress = Led1.progress;
+  
+  //if (PIRstate==0 || water_level==0)
+   //Led1.idx_color=200;
+   
+//    if (Led1.progress== 0 && Led1.idx_color==0)
+//  {
+//    Led1.setColorDimm(0,255,0);
+//    Led1.idx_color =100;
+//  }
+//  if ( Led1.progress == 0 && Led1.idx_color==100)
+//  {
+//    Led1.setColorDimm(0,0,255);
+//    Led1.idx_color=0;
+//  }
+//
+//if ( Led1.progress == 0 && Led1.idx_color==200)
+//  {
+//    Led1.setColorDimm(255,0,0);
+//    Led1.idx_color =0;
+//  }
+  delay(10);
+}
 
-
-void RGB_LEDs_setup()
+void setup_RGB_LED1()
 { 
-  pinMode(redPin, OUTPUT);
-  pinMode(greenPin, OUTPUT);
-  pinMode(bluePin, OUTPUT); 
+  pinMode(redPin1, OUTPUT);
+  pinMode(greenPin1, OUTPUT);
+  pinMode(bluePin1, OUTPUT); 
 }
 
 void setColor(int red, int green, int blue)
 {
-  analogWrite(redPin, red);
-  analogWrite(greenPin, green);
-  analogWrite(bluePin, blue);  
-}
-
-void RGB_LEDs_color_show()
-{
-  setColor(max_V, 0, 0);  // red
-  delay(1000);
-  setColor(0, max_V, 0);  // green
-  delay(1000);
-  setColor(0, 0, max_V);  // blue
-  delay(1000);
-  setColor(max_V, max_V, 0);  // yellow
-  delay(1000);  
-  setColor(purple_idx, 0, purple_idx);  // purple
-  delay(1000);
-  setColor(0, max_V, max_V);  // aqua
-  delay(1000);
+  analogWrite(redPin1, red);
+  analogWrite(greenPin1, green);
+  analogWrite(bluePin1, blue);  
 }
 
 //color + DIMMING effect
-void setColor1(int color)
+void setColor_LED1(int color)
 {
   int dimm=0;
    switch (color) {

@@ -1,3 +1,11 @@
+int current_photocell_value;
+int mean_photocell_value;
+
+void setup_photocell()
+{
+  pinMode(photocellPin, INPUT);
+}
+
 int photocell_reading()
 {
   int photocellReading = analogRead(photocellPin);
@@ -8,29 +16,45 @@ int photocell_reading()
   return photocellReading;
 }
 
-void photocell_out_serial_msg(int photocellReading)
+
+//edit the current value of the photocell
+void brightness_check()
 {
-  int range = map(photocellReading, sensorMin, sensorMax, 0, 3);
-     // Serial.println(photocellReading);
-  // do something different depending on the range value:
-  switch (range) {
-    case 0:    // your hand is on the sensor
-      Serial.println("bright");
-      break;
-    case 1:    // your hand is close to the sensor
-      Serial.println("medium");
-      break;
-    case 2:    // your hand is a few inches from the sensor
-      Serial.println("dim");
-      break;
-    case 3:    // your hand is nowhere near the sensor
-      Serial.println("dark");
-      break;
-      }
+  current_photocell_value = photocell_reading();
+  int mean = brightness_mean_calculation();
+  
+  if(Led1.progress == 0 && Led1.idx_color ==500)
+  {
+    set_brightness_color(current_photocell_value);
+    Led1.idx_color = 0;
+  }
 }
 
-void photocell_out_LED_brightness(int photocellReading)
+int brightness_mean_calculation()
 {
-  int LEDbrightness = map(photocellReading, sensorMin, sensorMax, 0, max_V);
-  analogWrite(LEDpin, LEDbrightness);
+  mean_photocell_value = (mean_photocell_value + current_photocell_value)/2;
+  
+  return mean_photocell_value;
 }
+
+void set_brightness_color(int brightness_mean)
+{
+
+  int brightness = map(brightness_mean, Photocell_Value_Min, Photocell_Value_Max, 0, 3);
+
+  switch (brightness) {
+   case 0:   
+      Led1.setColorDimm(0,255,0);
+      break;
+   case 1:   
+      Led1.setColorDimm(100,200,0);
+      break;   
+   case 2:   
+      Led1.setColorDimm(200,100,0);
+      break;   
+   case 3:   
+      Led1.setColorDimm(255,0,0);
+      break;
+  }
+}
+
