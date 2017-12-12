@@ -5,22 +5,18 @@ void alarm_activation()
     //activation of PIR detector
     if (digitalRead(PIRPin) == LOW)
       activate_buzzer();
+
+  Serial.print("PIR detector : "); Serial.println(digitalRead(PIRPin));
+  Serial.println("-------------------------------");
   }
 }
 
 void activate_buzzer()
 {
-//      digitalWrite(BuzzerPin, HIGH);
-//      delay(800);
-//      digitalWrite(BuzzerPin, LOW);
-//      delay(800);
-//      digitalWrite(BuzzerPin, HIGH);
-//      delay(800);
-//      digitalWrite(BuzzerPin, LOW);
-//      delay(800);
-//      digitalWrite(BuzzerPin, HIGH);
-//      delay(800);
-//      digitalWrite(BuzzerPin, LOW);
+  tone(3,2048);
+  delay(3000);
+  noTone(3);
+  //delay(2000);
 }
 
 void setup_alarm()

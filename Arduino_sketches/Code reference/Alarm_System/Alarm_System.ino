@@ -1,6 +1,6 @@
 
-int pirPin = 6; //motion detector pin
-int ledPin = 13; //led pin
+int pirPin = 17; //motion detector pin
+int ledPin = 7; //led pin
 
 int pirState = LOW; //current pir state
 
@@ -11,6 +11,7 @@ void setup(){
   
   pinMode(ledPin,OUTPUT);
   pinMode(pirPin,INPUT_PULLUP);
+  digitalWrite(ledPin,HIGH);
 }
 
 
@@ -27,8 +28,7 @@ void loop(){
   Serial.println("OFF------");
   }
 
-  
-digitalWrite(ledPin,pirState);
+
 delay(200);
 
 

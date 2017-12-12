@@ -4,31 +4,38 @@
 void battery_voltage_check()
 {
   battery_voltage = analogRead(batteryVoltagePin);
-  if(Led2.progress==0)
+  float voltage = battery_voltage;
+  voltage = 3.33*voltage/1023*2;
+  
+  Serial.print("Battery Voltage : ");  Serial.println(voltage);
+  
   battery_voltage_display(battery_voltage);
+  if(Led2.progress < 10)
+  {
+    Led2.writeRGB(0,0,0);
+  }
 }
   
 void battery_voltage_display(int voltage)
 {
     int battery_level = map(voltage, Battery_Voltage_Min, Battery_Voltage_Max, 0, 3);
     
-    battery_level==0 ? battery_voltage = LOW : battery_voltage = HIGH;//set LED color
-      
+    Serial.print("Battery_level : "); Serial.println(battery_level);
+    
+    battery_level==0 ? battery_voltage = LOW : battery_voltage = HIGH;//set LED color    
+  
   switch (battery_level) {
    case 0:   
-      Led2.setColorDimm(255,0,0);
+      Led2.writeRGB(30,0,0);
       break;
    case 1:   
-      Led2.setColorDimm(255,20,0);
-      //delay(1);
+      Led2.writeRGB(255,255,0);
       break;   
    case 2:   
-      Led2.setColorDimm(255,100,0);
-      //delay(5);
+      Led2.writeRGB(50,255,0);
       break;   
    case 3:   
-      Led2.setColorDimm(0,255,0);
-      //delay(10);
+      Led2.writeRGB(0,255,0);
       break;
   }
 }
