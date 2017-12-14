@@ -26,6 +26,7 @@ void setup()
 void loop() 
 {
 
+
   Serial.println("-------------------------------");
   Serial.println("-------------------------------");
   Serial.println("-------------------------------");
@@ -40,6 +41,9 @@ void loop()
   
   //battery voltage  level check and display the color corresponding of the value read on the RGB_LED1  
   battery_voltage_check(); 
+
+  //activation of PIR detector and buzzer if necessary
+  alarm_activation();
   
   //moisture check: if the moisture is too low the water pump will be activated
   Serial.println("--------------------------------");
@@ -58,10 +62,6 @@ void loop()
   Serial.println("Channel4:");
   watering_channel(CHANNEL4);
   Serial.println("--------------------------------");
-
-  
-  //activation of PIR detector and buzzer if necessary
-  alarm_activation();
 
   delay(5);
 }

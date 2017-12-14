@@ -33,6 +33,7 @@ void watering_channel(int channel_nr)
   }
 
   int quantity_of_water = water_volume_check(potPin);
+  quantity_of_water >= 30 ? quantity_of_water = 30 : quantity_of_water= quantity_of_water;
   int moisture = analogRead(moisturePin);
   
   Serial.print("pot value: ");
@@ -41,7 +42,7 @@ void watering_channel(int channel_nr)
   Serial.println(moisture);
   
   //check if watering is necessary
-  if (quantity_of_water > 16 && moisture > 1023)
+  if (quantity_of_water > 16 && moisture > 800)
   {
     Serial.print("MOTOR CHANNEL: ");Serial.print(channel_nr+1);Serial.println(" ON");
     
@@ -65,7 +66,7 @@ int water_volume_check(int potPin)
 {
  int water_volume_Reading = analogRead(potPin);
 
- int water_volume = map(water_volume_Reading, Water_Volume_Value_Min, Water_Volume_Value_Max, 0, 100);
+ int water_volume = map(water_volume_Reading, Water_Volume_Value_Min, Water_Volume_Value_Max, 0, 30);
 
  return water_volume;
 }

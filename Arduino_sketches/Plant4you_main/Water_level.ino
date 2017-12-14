@@ -12,11 +12,11 @@ void watertank_level_display(int water_level)
 {
   if (Led1.progress == 0 && Led1.idx_color == WATER)
   {
-     if (water_level == LOW) //the tank is empty, fast dimming
+     if (water_level == HIGH) //the tank is empty, fast dimming
      {
-      Led1.setColor(0,55,55); //aqua
+      Led1.setColor(200,200,200); //aqua
      }
-     else if (water_level == HIGH) // the tank has still water in it; slow dimming
+     else if (water_level == LOW) // the tank has still water in it; slow dimming
      {
       Led1.setColor(0,5,70); //blue
      }
