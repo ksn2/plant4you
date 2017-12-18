@@ -52,7 +52,7 @@
 //-----------Sensors constant parameters-----------//
 
 #define Photocell_Value_Min         150
-#define Photocell_Value_Max         775
+#define Photocell_Value_Max         550
 
 #define Moisture_Value_Min          100
 #define Moisture_Value_Max          1023

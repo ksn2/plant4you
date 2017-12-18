@@ -26,7 +26,7 @@ void setup()
 void loop() 
 {
 
-
+  //delay(2000);
   Serial.println("-------------------------------");
   Serial.println("-------------------------------");
   Serial.println("-------------------------------");
@@ -63,7 +63,7 @@ void loop()
   watering_channel(CHANNEL4);
   Serial.println("--------------------------------");
 
-  delay(5);
+  delay(1);
 }
 
 void setup_leds()

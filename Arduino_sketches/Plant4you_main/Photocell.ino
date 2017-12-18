@@ -19,6 +19,8 @@ void brightness_check()
 
   Serial.print("Brightness : "); Serial.println(current_photocell_value);
   Serial.print("Brightness  mean: "); Serial.println(mean_photocell_value);
+  int brightness = map(mean_photocell_value, Photocell_Value_Min, Photocell_Value_Max, 0, 3);
+  Serial.println(brightness);
   Serial.println("-------------------------------");
   
   if(Led1.progress == 0 && Led1.idx_color == PHOTOCELL)

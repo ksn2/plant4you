@@ -49,11 +49,21 @@ void watering_channel(int channel_nr)
     digitalWrite(motorPin, HIGH);
     int i = 0;
   //for loop to increase time => watering duration in seconds
+   Led1.writeRGB(0,0,255);
+
     while(i < (quantity_of_water-15))
     {
       i++;
-      delay(1000); 
+      Led1.writeRGB(0,0,255);
+      delay(250);
+      Led1.writeRGB(0,0,0);
+      delay(250); 
+      Led1.writeRGB(0,0,255);
+      delay(250);
+      Led1.writeRGB(0,0,0);
+      delay(250); 
     }  
+    
     
     digitalWrite(motorPin, LOW);
     
